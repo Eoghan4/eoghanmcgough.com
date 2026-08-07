@@ -48,14 +48,6 @@
     "external": true
   },
   {
-    "name": "Eve Fitz Art Portfolio",
-    "description": "Art portfolio website for Eve Fitz Art.",
-    "tech": ["HTML", "PHP"],
-    "link": "https://www.evefitz.art/",
-    "linkLabel": "Visit evefitz.art",
-    "external": true
-  },
-  {
     "name": "Snake for Nucleo L031k6",
     "description": "The classic Snake game programmed to run on a Nucleo L031k6 microcontroller.",
     "tech": ["C"],
