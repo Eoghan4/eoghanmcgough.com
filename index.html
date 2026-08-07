@@ -6,130 +6,125 @@
     <meta name="description" content="A portfolio website showcasing programming skills and projects">
     <title>Eoghan McGough</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADtvYoAdUcWAAAAAAD/hAAARygGAP/+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIiQiIiREREQiE0IiEzMzMxITNCIVUAAAEhMzQiEREREiITM0IiIiIiIiEzNCIiIiIiIhMzQiIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIhVRIiIiIiIiFRIiIiIiIiIhIiIiIiIiL//wAA3wEAAI4AAACGAAAAgwEAAMH/AADg/wAA8H8AAPg/AADwfwAA4P8AAMH/AACD/wAAh/8AAI//AADf/wAA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <a class="header-logo" href="#"><span>E</span>M</a>
         <nav>
-            <ul>
-                <li><a href="https://halfdecent.ie" target="_blank">HalfDecent.ie</a></li>
-                <li>|</li>
-                <li><a href="https://github.com/Eoghan4" target="_blank">GitHub</a></li>
-                <li>|</li>
-                <li><a href="https://www.linkedin.com/in/eoghan-mcgough-a91773348" target="_blank">LinkedIn</a></li>
-            </ul>
+            <a href="https://halfdecent.ie" target="_blank">HalfDecent</a>
+            <a href="https://github.com/Eoghan4" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/eoghan-mcgough-a91773348" target="_blank">LinkedIn</a>
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Eoghan McGough</h1>
-        <p>Hi, I'm Eoghan, a Computer Science (Infrastructure) Student and Professional Software Developer!</p>
+    <section id="hero" style="max-width:none;">
+        <div class="hero-inner">
+<h1>Eoghan<br><span class="accent">McGough</span></h1>
+            <p>Computer Science (Infrastructure) student and professional software developer.</p>
+        </div>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2>About <span class="accent">me</span></h2>
         <p>I'm a Computer Science Infrastructure student with experience in programming, networking, web development, and hardware. I love solving problems and creating efficient solutions, as well as creating fun (if sometimes useless) projects to tie into my passions.</p>
-        <br>
-        <p>I am currently interning at SAP as a Software Developer as part of the Analytics Cloud team via their STAR Programme. I have industry experience in software development, with a focus on End-to-End testing.</p>
+        <p>I am currently interning at SAP as a Software Developer as part of the Analytics Cloud team via their STAR Programme. I have industry experience in software development.</p>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Languages: C, Python, Java, C++, JavaScript, PHP</li>
-            <li>Tools: Angular Framework, Cypress Framework, SAP Analytics Cloud, Git, Gerrit, Bash, Cisco IOS, Excel</li>
-        </ul>
+        <div class="skills-row">
+            <span class="skills-row-label">Languages:</span>
+            <span class="tag">C</span>
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">C++</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Bandung</span>
+        </div>
+        <div class="skills-row">
+            <span class="skills-row-label">Tools:</span>
+            <span class="tag">Angular</span>
+            <span class="tag">Cypress</span>
+            <span class="tag">SAP Analytics Cloud</span>
+            <span class="tag">Git</span>
+            <span class="tag">Gerrit</span>
+            <span class="tag">Bash</span>
+            <span class="tag">Cisco IOS</span>
+            <span class="tag">Excel</span>
+        </div>
+        <div class="skills-row">
+            <span class="skills-row-label">Experience:</span>
+            <span class="tag">Agile</span>
+            <span class="tag">HPOM</span>
+            <span class="tag">E2E Testing</span>
+            <span class="tag">Usage Tracking</span>
+            <span class="tag">Bug Fixes</span>
+        </div>
     </section>
 
     <section id="projects">
-        <h2>Personal Projects</h2>
-        <div class="project">
-            <h3>Half Decent</h3>
-            <p>Online Shop for me and <a href="https://www.evefitz.art/" target="_blank">Eve</a>'s brand. Technologies used: JavaScript, PHP</p>
-            <a href="https://halfdecent.ie" target="_blank">Visit www.halfdecent.ie</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>On-Track</h3>
-            <p>Ireland-Wide Public Transport Route Info Tool for Trains and LUAS, mad by myself and <a href="https://jakub.barabasz.dev">Kuba Barabasz</a>. Technologies used: Angular, NodeJS, Nginx</p>
-            <a href="https://ontrack.eoghanmcgough.com" target="_blank">Visit ontrack.eoghanmcgough.com</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Calendar Buddy</h3>
-            <p>Tool for uploading rosters from an Excel file and adding them to Google Calendar. Technologies used: JavaScript, Google API</p>
-            <a href="./cb/" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Calendar Buddy Desktop</h3>
-            <p>Desktop Application version of Calendar Buddy. Technologies used: Python, Google API</p>
-            <a href="./cbd/">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Bussle</h3>
-            <p>Wordle-style Bus Route guessing game, also serves as an Ireland-wide bus route info tool. Technologies used: Python, Django, Nginx</p>
-            <a href="https://bussle.eoghanmcgough.com" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>NotesGPT</h3>
-            <p>AI note-taking assistant to convert slides into concise notes. Technologies used: Python, ChatGPT API</p>
-            <a href="https://github.com/Eoghan4/NotesGPT" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>LED Train Display</h3>
-            <p>ESP-32 powered LED Matrix display to display the next train at a station, mimicking Train Station screens. Technologies used: C++, ESP-32, IrishRail API</p>
-            <a href="https://github.com/Eoghan4/NextTrainScreen" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Eve Fitz Art Portfolio</h3>
-            <p>Art portfolio website for Eve Fitz Art. Technologies used: HTML, PHP</p>
-            <a href="https://www.evefitz.art/" target="_blank">Visit www.evefitz.art</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Snake for the Nucleo L031k6</h3>
-            <p>The video game snake programmed to run on a microcontroller. Technologies used: C</p>
-            <a href="https://github.com/Eoghan4/Snake-L031k6" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Machine-Learning Prediction Application</h3>
-            <p>Supervised Machine-Learning demo for college. Technologies used: Java</p>
-            <a href="https://github.com/Eoghan4/MachineLearningJava" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Sudoku</h3>
-            <p>Browser-based Sudoku Game. Technologies used: JavaScript</p>
-            <a href="./eve/sudoku/" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Black Jack</h3>
-            <p>Example Leaving Cert Project. Technologies used: Python</p>
-            <a href="./Report/" target="_blank">View Project</a>
-        </div>
-        <br>
-        <div class="project">
-            <h3>Minecraft Server</h3>
-            <p>I am hosting a Minecraft Server on an Arch Linux Machine I built. Technologies used: Bash, Java, CloudFlare</p>
-            <a href="#" target="_blank">Connect via mc.eoghanmcgough.com</a>
-        </div>
+        <h2>Projects</h2>
+        <div class="projects-grid" id="projects-grid"></div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>I can be reached via my email: eoghanmcgough@gmail.com</p>
+        <p>Reach me at <a href="mailto:eoghanmcgough@gmail.com">eoghanmcgough@gmail.com</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Eoghan McGough. All rights reserved.</p>
+        <p>&copy; 2026 Eoghan McGough. All rights reserved.</p>
     </footer>
 
+    <script>
+      fetch('./projects.json')
+        .then(function(res) {
+          if (!res.ok) throw new Error('Failed to load projects.json');
+          return res.json();
+        })
+        .then(function(projects) {
+          var grid = document.getElementById('projects-grid');
+          projects.forEach(function(p) {
+            var card = document.createElement('div');
+            card.className = 'project';
+            var heading = document.createElement('h3');
+            heading.textContent = p.name;
+            var desc = document.createElement('p');
+            desc.textContent = p.description;
+            var tags = document.createElement('div');
+            tags.className = 'tech-tags';
+            p.tech.forEach(function(t) {
+              var badge = document.createElement('span');
+              badge.className = 'tag';
+              badge.textContent = t;
+              tags.appendChild(badge);
+            });
+            var link = document.createElement('a');
+            link.href = p.link;
+            link.textContent = p.linkLabel;
+            if (p.external) {
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+            }
+            card.appendChild(heading);
+            card.appendChild(desc);
+            card.appendChild(tags);
+            card.appendChild(link);
+            grid.appendChild(card);
+          });
+        })
+        .catch(function(err) {
+          console.error(err);
+          var msg = document.createElement('p');
+          msg.style.color = '#e06c75';
+          msg.textContent = 'Projects could not be loaded. Please try again later.';
+          document.getElementById('projects-grid').appendChild(msg);
+        });
+    </script>
 </body>
 </html>
