@@ -15,6 +15,14 @@
     "linkLabel": "Visit ontrack.eoghanmcgough.com",
     "external": true
   },
+    {
+    "name": "ShotsByWhatsername Photo Gallery",
+    "description": "Photography Portfolio Website with admin dashboard and upload features.",
+    "tech": ["JavaScript", "PHP"],
+    "link": "https://shotsbywhatsername.ie",
+    "linkLabel": "Visit shotsbywhatsername.ie",
+    "external": true
+  },
   {
     "name": "Calendar Buddy",
     "description": "Tool for uploading rosters from an Excel file and adding them to Google Calendar.",
