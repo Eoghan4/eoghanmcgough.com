@@ -64,6 +64,14 @@
     "external": true
   },
   {
+    "name": "Mini(on) Games",
+    "description": "Minion-themed NDS Game",
+    "tech": ["C", "DevKitPro", "DSGameMaker"],
+    "link": "https://github.com/Eoghan4/MINIon-Games",
+    "linkLabel": "View on GitHub",
+    "external": true
+  },
+  {
     "name": "External Visual Experience",
     "description": "Interactive, evolving art installation in NCAD.",
     "tech": ["Python", "OpenCV2"],
