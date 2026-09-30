@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="External Visual Experience">
+    <title>E.V.E — Eoghan McGough</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADtvYoAdUcWAAAAAAD/hAAARygGAP/+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIiQiIiREREQiE0IiEzMzMxITNCIVUAAAEhMzQiEREREiITM0IiIiIiIiEzNCIiIiIiIhMzQiIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIhVRIiIiIiIiFRIiIiIiIiIhIiIiIiIiL//wAA3wEAAI4AAACGAAAAgwEAAMH/AADg/wAA8H8AAPg/AADwfwAA4P8AAMH/AACD/wAAh/8AAI//AADf/wAA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-page-hero {
+            padding: 72px 2.5rem 56px;
+            border-bottom: 1px solid var(--border);
+            max-width: none;
+        }
+        .about-page-hero .hero-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .about-page-hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .about-page-hero p {
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        .about-body {
+            max-width: 860px;
+        }
+
+        .about-body p {
+            color: #a0a0b8;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 1.4rem;
+        }
+
+        .about-body p:last-child { margin-bottom: 0; }
+
+        .about-body a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        .about-body a:hover { text-decoration: underline; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: color 0.15s, background 0.15s;
+            margin-right: 4px;
+        }
+        .back-link:hover {
+            color: var(--text);
+            background: var(--surface2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="/"><span>E</span>M</a>
+        <button class="burger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav>
+            <a class="back-link" href="/">Home</a>
+            <a href="https://halfdecent.ie" target="_blank">HalfDecent</a>
+            <a href="https://github.com/Eoghan4" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/eoghan-mcgough-a91773348" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <section class="about-page-hero" style="max-width:none;">
+        <div class="hero-inner">
+            <h1>External Visual Experience (E.V.E)<span class="accent">me</span></h1>
+            <p>Interactive and evolving art installation in NCAD</p>
+        </div>
+    </section>
+
+    <section class="about-body">
+        <p>
+        More to be added. 
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Eoghan McGough. All rights reserved.</p>
+    </footer>
+    <script>
+      document.querySelector('.burger').addEventListener('click', function() {
+        var nav = document.querySelector('header nav');
+        var open = nav.classList.toggle('open');
+        this.setAttribute('aria-expanded', open);
+      });
+    </script>
+</body>
+</html>
