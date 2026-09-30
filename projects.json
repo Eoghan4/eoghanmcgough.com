@@ -89,7 +89,7 @@
   },
   {
     "name": "Black Jack",
-    "description": "Leaving Certificate computer science project.",
+    "description": "H1 Leaving Certificate computer science project.",
     "tech": ["Python"],
     "link": "./Report/",
     "linkLabel": "View Project",
