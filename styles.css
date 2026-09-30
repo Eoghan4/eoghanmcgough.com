@@ -33,6 +33,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .header-logo {
@@ -254,9 +255,72 @@ footer {
     color: var(--muted);
 }
 
+/* ── Burger button ── */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.burger:hover { background: var(--surface2); }
+
+.burger span {
+    display: block;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+}
+
+.burger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.burger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+.burger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ── Responsive ── */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header { padding: 0 1.25rem; }
     #hero { padding: 56px 1.25rem 48px; }
     section { padding: 48px 1.25rem; }
+
+    .burger { display: flex; }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 8px 0;
+        z-index: 100;
+    }
+
+    header nav.open { display: flex; }
+
+    header nav a {
+        padding: 12px 1.25rem;
+        border-radius: 0;
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 601px) {
+    .burger { display: none !important; }
 }
