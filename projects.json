@@ -64,6 +64,14 @@
     "external": true
   },
   {
+    "name": "External Visual Experience",
+    "description": "Interactive, evolving art installation in NCAD.",
+    "tech": ["Python", "OpenCV2"],
+    "link": "https://github.com/Eoghan4/external-visual-experience",
+    "linkLabel": "View on GitHub",
+    "external": true
+  },
+  {
     "name": "Snake for Nucleo L031k6",
     "description": "The classic Snake game programmed to run on a Nucleo L031k6 microcontroller.",
     "tech": ["C"],
