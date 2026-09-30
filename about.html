@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Eoghan McGough — Computer Science student, SAP intern, software developer">
+    <title>About — Eoghan McGough</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADtvYoAdUcWAAAAAAD/hAAARygGAP/+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIiQiIiREREQiE0IiEzMzMxITNCIVUAAAEhMzQiEREREiITM0IiIiIiIiEzNCIiIiIiIhMzQiIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIQABIiIiIiIhVRIiIiIiIiFRIiIiIiIiIhIiIiIiIiL//wAA3wEAAI4AAACGAAAAgwEAAMH/AADg/wAA8H8AAPg/AADwfwAA4P8AAMH/AACD/wAAh/8AAI//AADf/wAA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-page-hero {
+            padding: 72px 2.5rem 56px;
+            border-bottom: 1px solid var(--border);
+            max-width: none;
+        }
+        .about-page-hero .hero-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .about-page-hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .about-page-hero p {
+            color: var(--muted);
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        .about-body {
+            max-width: 860px;
+        }
+
+        .about-body p {
+            color: #a0a0b8;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 1.4rem;
+        }
+
+        .about-body p:last-child { margin-bottom: 0; }
+
+        .about-body a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        .about-body a:hover { text-decoration: underline; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: color 0.15s, background 0.15s;
+            margin-right: 4px;
+        }
+        .back-link:hover {
+            color: var(--text);
+            background: var(--surface2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="/"><span>E</span>M</a>
+        <nav>
+            <a class="back-link" href="/">← Back</a>
+            <a href="https://halfdecent.ie" target="_blank">HalfDecent</a>
+            <a href="https://github.com/Eoghan4" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/eoghan-mcgough-a91773348" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <section class="about-page-hero" style="max-width:none;">
+        <div class="hero-inner">
+            <h1>About <span class="accent">me</span></h1>
+            <p>Computer Science (Infrastructure) student &amp; SAP STAR Programme Intern</p>
+        </div>
+    </section>
+
+    <section class="about-body">
+        <p>
+            I am a Final Year Computer Science (Infrastructure) student at TU Dublin, and a STAR Programme Intern at SAP.
+            I am currently interning at SAP as a software developer on the SAP Analytics Cloud team.
+        </p>
+        <p>
+            I am actively looking for an Entry-Level/Graduate position in Software Development/Engineering, Cloud Infrastructure or similar fields.
+        </p>
+        <p>
+            I have a passion for creative problem solving and working on fun but useful projects involving software and hardware. I enjoy expressing myself through technology and some of my projects reflect this.
+        </p>
+        <p>
+            One recent project that I am proud of is my <a href="https://github.com/Eoghan4/NextTrainScreen" target="_blank" rel="noopener noreferrer">Train Timetable Screen</a>. My goal was to recreate the info screens found in train stations across the country, and take a piece of iconic Irish infrastructure into my home. As someone who takes the train daily, these displays play a big but silent part in my life. I now have recreated it using an LED Matrix screen and an ESP-32, so I have realtime train info on display in a creative way in my home.
+        </p>
+        <p>
+            I also have experience as a freelance web developer, creating and hosting a number of sites.
+            <a href="https://evefitz.art" target="_blank" rel="noopener noreferrer">evefitz.art</a> is an artist portfolio website, which gives the artist the ability to upload, categorise and manage their pieces and display them for all to see.
+            Similarly, <a href="https://shotsbywhatsername.com" target="_blank" rel="noopener noreferrer">shotsbywhatsername</a> is a photography portfolio made for @ShotsByWhatsername.
+            I also have an online store, <a href="https://www.halfdecent.ie" target="_blank" rel="noopener noreferrer">halfdecent.ie</a>, that I developed for Eve Fitzsimons and myself for our clothing brand — it handles orders, stock updates and tracking.
+            Jakub Barabasz and I have jointly developed <a href="https://ontrack.eoghanmcgough.com/" target="_blank" rel="noopener noreferrer">ontrack.eoghanmcgough.com</a>, which allows for real-time train and Luas timetable viewing, as well as locating stations near you.
+        </p>
+        <p>
+            A lot of my projects relate to my personal interests. I have an interest in public transit which is very evident by my LED Train Time screen, On-Track Luas and train time site, <a href="https://bussle.eoghanmcgough.com" target="_blank" rel="noopener noreferrer">Bussle</a> bus route guessing game, and halfdecent.ie's transit related products. Trains, buses and trams are a part of everyday life for me and millions of others, and I feel that they are an underappreciated necessity. I believe people should focus more on the journey, not just the destination, and my projects reflect this mindset.
+        </p>
+        <p>
+            I also have a passion for photography, and as such a few of my projects involve image processing, which I am studying as part of my final year in college. For example, my External Visual Experience (E.V.E) is an interactive art installation in NCAD that allows passers-by to see themselves in a new light — whether represented through ASCII characters or wireframes — giving people a moment to stop and have fun on their way.
+        </p>
+        <p>
+            My time at SAP in the STAR Programme taught me lots of valuable skills that help both in the workplace and in my personal projects. I learned the value of testing and ensuring quality in everything I do. Through seminars and certificates I have gained invaluable AI experience, and as SAP migrates to an AI-first company I think I joined at the right time to fully benefit from this transition as AI-upskilling was a priority.
+        </p>
+        <p>
+            All of my projects can be found on this site and on my <a href="https://github.com/Eoghan4" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Eoghan McGough. All rights reserved.</p>
+    </footer>
+</body>
+</html>
