@@ -5,19 +5,19 @@
 }
 
 :root {
-    --bg: #0a0c10;
-    --surface: #0f1218;
-    --surface2: #161b24;
-    --border: #1e2535;
+    --bg: #080c12;
+    --surface: #0d1320;
+    --surface2: #132030;
+    --border: #1a2d45;
     --text: #e8edf5;
-    --muted: #7a8aaa;
-    --accent: #0070f2;
-    --accent-light: #5ba8ff;
-    --accent-bg: rgba(0, 112, 242, 0.1);
+    --muted: #7a9ab8;
+    --accent: #5bc8f5;
+    --accent-light: #90dcf8;
+    --accent-bg: rgba(91, 200, 245, 0.1);
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -37,7 +37,7 @@ header {
 }
 
 .header-logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-weight: 800;
     font-size: 1.1rem;
     color: var(--text);
@@ -67,6 +67,19 @@ header nav a:hover {
     background: var(--surface2);
 }
 
+.header-logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
+.hero-title-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.25rem;
+}
+
 /* ── Hero ── */
 #hero {
     padding: 100px 2.5rem 88px;
@@ -82,7 +95,7 @@ header nav a:hover {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(0, 112, 242, 0.18) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 70% 50%, rgba(91, 200, 245, 0.15) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -105,7 +118,7 @@ header nav a:hover {
 }
 
 #hero h1 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: clamp(2.8rem, 7vw, 5rem);
     font-weight: 800;
     line-height: 1.0;
@@ -134,7 +147,7 @@ section {
 section + section { border-top: 1px solid var(--border); }
 
 section h2 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
@@ -212,7 +225,7 @@ section#about p + p { margin-top: 1rem; }
 }
 
 .project h3 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     color: #fff;
