@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Half Decent",
+    "description": "Online shop for me and Eve's brand.",
+    "tech": ["JavaScript", "PHP"],
+    "link": "https://halfdecent.ie",
+    "linkLabel": "Visit halfdecent.ie",
+    "external": true
+  },
+  {
+    "name": "On-Track",
+    "description": "Ireland-wide public transport route info tool for trains and the LUAS, built with Kuba Barabasz.",
+    "tech": ["Angular", "NodeJS", "Nginx"],
+    "link": "https://ontrack.eoghanmcgough.com",
+    "linkLabel": "Visit ontrack.eoghanmcgough.com",
+    "external": true
+  },
+  {
+    "name": "EveFitz.art",
+    "description": "Art Portfolio for Eve Fitzimons, complete with admin dashboard and image upload features.",
+    "tech": ["JavaScript", "PHP"],
+    "link": "https://evefitz.art",
+    "linkLabel": "Visit evefitz.art",
+    "external": true
+  },
+  {
+    "name": "ShotsByWhatsername Photo Gallery",
+    "description": "Photography Portfolio Website with admin dashboard and upload features.",
+    "tech": ["JavaScript", "PHP"],
+    "link": "https://shotsbywhatsername.ie",
+    "linkLabel": "Visit shotsbywhatsername.ie",
+    "external": true
+  },
+  {
+    "name": "Calendar Buddy",
+    "description": "Tool for uploading rosters from an Excel file and adding them to Google Calendar.",
+    "tech": ["JavaScript", "Google API"],
+    "link": "./cb/",
+    "linkLabel": "View Project",
+    "external": false
+  },
+  {
+    "name": "Bussle",
+    "description": "Wordle-style bus route guessing game that also serves as an Ireland-wide bus route info tool.",
+    "tech": ["Python", "Django", "Nginx"],
+    "link": "https://bussle.eoghanmcgough.com",
+    "linkLabel": "View Project",
+    "external": true
+  },
+  {
+    "name": "NotesGPT",
+    "description": "AI note-taking assistant that converts slides into concise notes.",
+    "tech": ["Python", "ChatGPT API"],
+    "link": "https://github.com/Eoghan4/NotesGPT",
+    "linkLabel": "View on GitHub",
+    "external": true
+  },
+  {
+    "name": "LED Train Display",
+    "description": "ESP-32 powered LED matrix display showing the next train at a station, mimicking real departure boards.",
+    "tech": ["C++", "ESP-32", "IrishRail API"],
+    "link": "https://github.com/Eoghan4/NextTrainScreen",
+    "linkLabel": "View on GitHub",
+    "external": true
+  },
+  {
+    "name": "Mini(on) Games",
+    "description": "Minion-themed NDS Game",
+    "tech": ["C", "DevKitPro", "DSGameMaker"],
+    "link": "https://github.com/Eoghan4/MINIon-Games",
+    "linkLabel": "View on GitHub",
+    "external": true
+  },
+  {
+    "name": "External Visual Experience",
+    "description": "Interactive, evolving art installation in NCAD.",
+    "tech": ["Python", "OpenCV2"],
+    "link": "./eve.html",
+    "linkLabel": "Find Out More",
+    "external": false
+  },
+  {
+    "name": "Snake for Nucleo L031k6",
+    "description": "The classic Snake game programmed to run on a Nucleo L031k6 microcontroller.",
+    "tech": ["C"],
+    "link": "https://github.com/Eoghan4/Snake-L031k6",
+    "linkLabel": "View on GitHub",
+    "external": true
+  },
+  {
+    "name": "Machine-Learning Prediction App",
+    "description": "Supervised machine-learning demonstration built for college.",
+    "tech": ["Java"],
+    "link": "https://github.com/Eoghan4/MachineLearningJava",
+    "linkLabel": "View on GitHub",
+    "external": true
+  },
+  {
+    "name": "Sudoku",
+    "description": "Browser-based randomised Sudoku game.",
+    "tech": ["JavaScript"],
+    "link": "./sudoku/",
+    "linkLabel": "Play",
+    "external": false
+  },
+  {
+    "name": "Black Jack",
+    "description": "H1 Leaving Certificate computer science project.",
+    "tech": ["Python"],
+    "link": "./Report/",
+    "linkLabel": "View Project",
+    "external": false
+  },
+  {
+    "name": "Minecraft Server",
+    "description": "A Minecraft server hosted on a self-built Arch Linux machine.",
+    "tech": ["Bash", "Java", "CloudFlare"],
+    "link": "#",
+    "linkLabel": "Connect via mc.eoghanmcgough.com",
+    "external": false
+  }
+]

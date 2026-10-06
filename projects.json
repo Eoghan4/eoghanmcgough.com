@@ -15,6 +15,14 @@
     "linkLabel": "Visit ontrack.eoghanmcgough.com",
     "external": true
   },
+    {
+    "name": "External Visual Experience",
+    "description": "Interactive, evolving art installation in NCAD.",
+    "tech": ["Python", "OpenCV2"],
+    "link": "./eve.html",
+    "linkLabel": "Find out More",
+    "external": false
+  },
   {
     "name": "EveFitz.art",
     "description": "Art Portfolio for Eve Fitzimons, complete with admin dashboard and image upload features.",
@@ -60,22 +68,6 @@
     "description": "ESP-32 powered LED matrix display showing the next train at a station, mimicking real departure boards.",
     "tech": ["C++", "ESP-32", "IrishRail API"],
     "link": "https://github.com/Eoghan4/NextTrainScreen",
-    "linkLabel": "View on GitHub",
-    "external": true
-  },
-  {
-    "name": "Mini(on) Games",
-    "description": "Minion-themed NDS Game",
-    "tech": ["C", "DevKitPro", "DSGameMaker"],
-    "link": "https://github.com/Eoghan4/MINIon-Games",
-    "linkLabel": "View on GitHub",
-    "external": true
-  },
-  {
-    "name": "External Visual Experience",
-    "description": "Interactive, evolving art installation in NCAD.",
-    "tech": ["Python", "OpenCV2"],
-    "link": "https://github.com/Eoghan4/external-visual-experience",
     "linkLabel": "View on GitHub",
     "external": true
   },

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="External Visual Experience">
+    <meta name="description" content="External Visual Experience — Interactive art installation at NCAD">
     <title>E.V.E — Eoghan McGough</title>
     <link rel="icon" type="image/x-icon" href="Images/EM-02-10-2026.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,48 +11,207 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .about-page-hero {
+        /* ── Hero ── */
+        .eve-hero {
             padding: 72px 2.5rem 56px;
             border-bottom: 1px solid var(--border);
-            max-width: none;
+            position: relative;
+            overflow: hidden;
         }
-        .about-page-hero .hero-inner {
+        .eve-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('Images/eve-hero.png') center 45% / cover no-repeat;
+            opacity: 0.22;
+            z-index: 0;
+        }
+        .eve-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right, var(--bg) 0%, transparent 20%, transparent 80%, var(--bg) 100%),
+                linear-gradient(to bottom, transparent 20%, var(--bg) 100%);
+            z-index: 1;
+        }
+        .eve-hero .inner {
+            position: relative;
+            z-index: 2;
+        }
+        .eve-hero .inner {
             max-width: 860px;
             margin: 0 auto;
         }
-        .about-page-hero h1 {
-            font-family: 'Syne', sans-serif;
+        .eve-hero h1 {
             font-size: clamp(2rem, 5vw, 3.2rem);
             font-weight: 800;
             letter-spacing: -0.03em;
             color: #fff;
             margin-bottom: 0.5rem;
         }
-        .about-page-hero p {
+        .eve-hero .sub {
             color: var(--muted);
             font-weight: 300;
             font-size: 1rem;
         }
+        .meta-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 1.4rem;
+        }
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+        .meta-pill b { color: var(--accent); font-weight: 500; }
 
-        .about-body {
+        /* ── Content column ── */
+        .eve-wrap {
             max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2.5rem 100px;
         }
 
-        .about-body p {
-            color: #a0a0b8;
+        /* ── Prose ── */
+        .prose {
+            padding: 48px 0 40px;
+        }
+        .prose p {
+            color: var(--text);
             font-weight: 300;
-            line-height: 1.8;
-            margin-bottom: 1.4rem;
+            line-height: 1.85;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            opacity: 0.75;
+        }
+        .prose p:last-child { margin-bottom: 0; }
+        .prose .placeholder {
+            color: var(--muted);
+            font-style: italic;
+            opacity: 1;
+            border-left: 2px solid var(--border);
+            padding-left: 14px;
         }
 
-        .about-body p:last-child { margin-bottom: 0; }
-
-        .about-body a {
-            color: var(--accent-light);
-            text-decoration: none;
+        /* ── Label ── */
+        .label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
         }
-        .about-body a:hover { text-decoration: underline; }
 
+        /* ── Divider ── */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 0;
+        }
+
+        /* ── Media layouts ── */
+
+        /* Single full-width */
+        .media-full {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+        .media-full img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Side by side */
+        .media-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .media-pair .media-item {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+        .media-pair .media-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .media-pair .media-item.portrait { aspect-ratio: 3/4; }
+        .media-pair .media-item.landscape { aspect-ratio: 4/3; }
+        .media-pair .media-item.wide { aspect-ratio: 16/9; }
+
+        /* Text + media side by side */
+        .media-aside {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+        }
+        .media-aside.flip { direction: rtl; }
+        .media-aside.flip > * { direction: ltr; }
+        .media-aside .media-item {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+        .media-aside .media-item img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .media-aside .prose { padding: 0; }
+
+        /* Three column */
+        .media-trio {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .media-trio .media-item {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            aspect-ratio: 3/4;
+        }
+        .media-trio .media-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Caption */
+        .caption {
+            font-size: 0.77rem;
+            color: var(--muted);
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Spacer */
+        .gap { margin-bottom: 48px; }
+        .gap-sm { margin-bottom: 24px; }
+
+        /* Back link */
         .back-link {
             display: inline-flex;
             align-items: center;
@@ -66,10 +225,25 @@
             transition: color 0.15s, background 0.15s;
             margin-right: 4px;
         }
-        .back-link:hover {
-            color: var(--text);
-            background: var(--surface2);
+        .back-link:hover { color: var(--text); background: var(--surface2); }
+
+        @media (max-width: 640px) {
+            .eve-hero { padding: 48px 1.2rem 36px; }
+            .eve-wrap { padding: 0 1.2rem 60px; }
+            .media-pair,
+            .media-aside,
+            .media-aside.flip,
+            .media-trio { grid-template-columns: 1fr; direction: ltr; }
+            .media-pair .media-item.portrait { aspect-ratio: 4/3; }
+            .media-trio .media-item { aspect-ratio: 16/9; }
         }
+
+        .prose a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        .prose a:hover { text-decoration: underline; }
+
     </style>
 </head>
 <body>
@@ -86,22 +260,179 @@
         </nav>
     </header>
 
-    <section class="about-page-hero" style="max-width:none;">
-        <div class="hero-inner">
+    <!-- ── Hero ── -->
+    <section class="eve-hero">
+        <div class="inner">
             <h1>External Visual Experience<span class="accent"> (E.V.E)</span></h1>
-            <p>Interactive and evolving art installation in NCAD</p>
+            <p class="sub">Interactive and Evolving Art Installation</p>
+            <div class="meta-row">
+                <div class="meta-pill">Location: <b>NCAD</b></div>
+            </div>
         </div>
     </section>
 
-    <section class="about-body">
-        <p>
-        More to be added. 
-        </p>
-    </section>
+    <div class="eve-wrap">
+
+        <!-- ── Opening: full-width hero shot of the ASCII monitor ── -->
+        <div class="prose">
+            <p><a href="https://evefitz.art" target="_blank" rel="noopener noreferrer">Eve Fitzsimons</a>, an artist at NCAD, has her ceramics studio desk right next to a window that faces onto the main thoroughfare of the campus, a busy walkway that hundreds of people pass through every day. It's the kind of space people move through without really stopping, a liminal, trasnitional space. I wanted to change that.</p>
+            <p>E.V.E started as an excuse to do something fun with that window. Eve found an old CRT TV and a monitor, and I got to work figuring out how to make something worth stopping for.</p>
+        </div>
+
+        <div class="media-full gap">
+            <img src="Images/20260929_174439.jpg" alt="Monitor showing green ASCII art beside a CRT TV with static" loading="lazy">
+        </div>
+
+        <hr class="divider">
+
+        <!-- ── Section 1: The setup — text left, photo right ── -->
+        <div class="prose gap">
+            <div class="label">The setup</div>
+            <div class="media-aside">
+                <div class="prose" style="padding:0;">
+                    <p>The first thing I got working was ASCII rendering. The webcam feed converted to characters in real time and displayed on the monitor. People walking past could see themselves rendered in text, which was enough to make them stop and look.</p>
+                    <p>It's a novel way of seeing yourself in a different way, and people walking by had many varying reactions.</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/20260929_174448.jpg" alt="ASCII art monitor in the NCAD window with CCTV warning sign" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- ── First GIF: the live system working ── -->
+        <div class="media-full gap-sm">
+            <img src="Images/NCAD1Short-ezgif.com-video-to-gif-converter.gif" alt="Pose detection tracking a person outside the window" loading="lazy">
+        </div>
+        <p class="caption gap">In order to add a more interactive element, both screens were incoporated, allowing passersby to vote in a pole by moving their arms.</p>
+
+        <hr class="divider">
+
+        <!-- ── Section 2: The voting mechanic — photo left, text right ── -->
+        <div class="prose gap">
+            <div class="label">The vote</div>
+            <div class="media-aside flip">
+                <div class="prose" style="padding:0;">
+                    <p>Once motion tracking was working I wanted to give people a way to actually do something, to not just be seen, but participate. So I added a voting mechanic: raise your left hand to vote for one option, raise your right for the other.</p>
+                    <p>The results display on the flat monitor for everyone passing to see. It turns a walk-through into a tiny public opinion poll.</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/20261005_163605.jpg" alt="Someone pointing at the live poll results through the window" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Second GIF: votes ticking up ── -->
+        <div class="media-full gap-sm">
+            <img src="Images/NCAD2Short-ezgif.com-video-to-gif-converter.gif" alt="Live poll votes updating in real time on the monitor" loading="lazy">
+        </div>
+        <p class="caption gap">The poll updates live on the monitor as votes are cast, visible from outside through the glass.</p>
+
+        <hr class="divider">
+
+        <!-- ── Section 3: Building it — trio of early setup photos ── -->
+        <div class="prose">
+            <div class="label">Building it</div>
+            <p>The setup came together in stages. First just getting the ASCII render working, then adding pose detection, then wiring up the voting logic and the live poll display. The CRT and monitor sitting side by side in the window provided a good split, allowing people to see themselves through the retro, nostalgic look of the CRT, and get a clear read on the results of the poll on the monitor. </p>
+        </div>
+
+        <div class="media-trio gap-sm">
+            <div class="media-item">
+                <img src="Images/20260928_172018.jpg" alt="Early monitor setup in the window" loading="lazy">
+            </div>
+            <div class="media-item">
+                <img src="Images/20260928_172021.jpg" alt="Setup detail" loading="lazy">
+            </div>
+            <div class="media-item">
+                <img src="Images/20260928_172029.jpg" alt="Installation in progress" loading="lazy">
+            </div>
+        </div>
+        <p class="caption gap">Setting up the installation, ASCII display of webcam feed.</p>
+
+        <!-- ── Third GIF ── -->
+        <div class="media-full gap">
+            <img src="Images/NCAD3-ezgif.com-video-to-gif-converter.gif" alt="E.V.E installation running" loading="lazy">
+        </div>
+
+        <hr class="divider">
+
+        <!-- ── Section 4: People using it — pair of photos + GIF ── -->
+        <div class="prose">
+            <div class="label">People using it</div>
+            <p>The walkway ins NCAD is one of those spaces people are always moving through but rarely stop in. What I liked about E.V.E was watching that change. People would catch a glimpse of themselves on the CRT or notice the ASCII monitor and just slow down. Some figured out the voting immediately, others needed a second. A few came back to vote again.</p>
+            <p>The reactions were the best part. People pulling faces at themselves in the CRT, leaning in close to find their features in the ASCII, nudging whoever they were walking with to come and look. A few took selfies in the screens. Some held their hand up tentatively, waited for the vote to register, then grinned when the number ticked up. There's something about watching someone interact with a thing you made, especially when they didn't expect it to be there, even moreso when it makes them smile.</p>
+        </div>
+
+        <div class="media-pair gap-sm">
+            <div class="media-item landscape">
+                <img src="Images/20261005_163609.jpg" alt="The installation live on Oct 5" loading="lazy">
+            </div>
+            <div class="media-item landscape">
+                <img src="Images/20261005_165302.jpg" alt="Passerby engaging with E.V.E" loading="lazy">
+            </div>
+        </div>
+
+        <div class="media-full gap-sm" style="margin-top:10px;">
+            <img src="Images/NCAD5Short-ezgif.com-video-to-gif-converter.gif" alt="Pose detection vote being cast" loading="lazy">
+        </div>
+        <p class="caption gap">The system detects a raised hand and locks in a vote.</p>
+
+
+        <hr class="divider">
+
+        <!-- ── Section: Technical ── -->
+        <div class="prose gap">
+            <div class="label">Under the hood</div>
+            <div class="media-aside flip">
+                <div class="prose" style="padding:0;">
+                    <p>E.V.E is built in Python. To make it easy for me or Eve to actually run and change things without touching code, I built a simple terminal UI that controls the whole system. You can switch any screen between modes, ASCII cam, wireframe skeleton overlay, or the live poll.</p>
+                    <p>It auto-detects however many screens and cameras are connected, so scaling up is straightforward. The poll choices can be swapped out in seconds.</p>
+                    <p>For those interested the source code can be found on my <a href="https://github.com/Eoghan4/external-visual-experience" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+                </div>
+                <div class="media-item">
+                    <img src="Images/eve-tui.png" alt="E.V.E terminal UI showing programme select and camera options" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <div class="media-pair gap-sm">
+            <div class="media-item wide">
+                <img src="Images/NCAD6Short-ezgif.com-video-to-gif-converter.gif" alt="E.V.E voting gesture" loading="lazy">
+            </div>
+            <div class="media-item wide">
+                <img src="Images/NCADshort7-ezgif.com-video-to-gif-converter.gif" alt="Poll result on monitor" loading="lazy">
+            </div>
+        </div>
+        <p class="caption gap">Votes cast. Results shown.</p>
+
+        <hr class="divider">
+        <hr class="divider">
+
+        <!-- ── Closing: last photo + last GIF + reflection ── -->
+        <div class="prose">
+            <div class="label">Reflection</div>
+            <p>At its core E.V.E is just a fun use of a space that was already there. I just added screens and a webcam, and allowed people interact with it how they please.</p>
+            <p>The objective was to get people to stop and appreciate a moment of their journey, not to just focus on the destination. E.V.E allows people to stop and reflect, literally seeing their own reflection in a new and fun way.</p>
+        </div>
+
+        <div class="media-pair gap-sm">
+            <div class="media-item landscape">
+                <img src="Images/20261005_163611.jpg" alt="Poll results visible on the monitor" loading="lazy">
+            </div>
+            <div class="media-item landscape">
+                <img src="Images/ezgif.com-video-to-gif-converter.gif" alt="Full interaction sequence" loading="lazy">
+            </div>
+        </div>
+
+        <div class="prose" style="padding-top: 40px; padding-bottom: 0;">
+            <p>I will continue to update E.V.E and expand it, adding more ways for people to interact.</p>
+        </div>
+
+    </div>
 
     <footer>
         <p>&copy; 2026 Eoghan McGough. All rights reserved.</p>
     </footer>
+
     <script>
       document.querySelector('.burger').addEventListener('click', function() {
         var nav = document.querySelector('header nav');
